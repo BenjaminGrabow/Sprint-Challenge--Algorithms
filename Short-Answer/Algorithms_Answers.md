@@ -11,7 +11,7 @@ b)
 Time Complexity: O(n log n)
 because we have a for loop with O(n)
 and a nested while loop whichs loops until the var j (which is 1)
-got multiplied by 2 every iteration until it reaches the value or get higher than n 
+got multiplied by 2 every iteration until it reaches the value of n or get higher than n 
 
 
 c)
@@ -33,7 +33,7 @@ through the n array and drop every time the eye until we find the first floor wh
 
 A way more efficient way would be to use binary search.
 We go every iteration to the middle of the n array and drop the egg.
-If the egg dont got broken we delete the left side and continue (again go to middle of n array and check if eye gets broken or not) until the eye gets broken and then we delete right side because we know our target(f) is in the left side.
+If the egg dont got broken we delete the left side and continue (again go to middle of n array and check if eye gets broken or not) until the eye gets broken and then we delete the right side because we know our target(f) is in the left side => continue until target (f) is found.
 
 Big O Notation(worst case) O(log(n))
 
