@@ -27,6 +27,15 @@ if bunnies == 0: return 0
 
 ## Exercise II
 
+A naive solution would be to use a iterative solution with a Time complexity of (Worst case: O big Notation) O(n) where we loop
+through the n array and drop every time the eye until we find the first floor where the egg gets broken => calculate current index minus one and we found f.
+
+
+A way more efficient way would be to use binary search.
+We go every iteration to the middle of the n array and drop the egg.
+If the egg dont got broken we delete the left side and continue (again go to middle of n array and check if eye gets broken or not) until the eye gets broken and then we delete right side because we know our target(f) is in the left side.
+
+Big O Notation(worst case) O(log(n))
 
 
 
