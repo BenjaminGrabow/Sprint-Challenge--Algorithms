@@ -11,6 +11,15 @@ b)
 
 
 c)
+Time Complexity: O(n)
+This a recursive function.
+When we call bunnyEars(5)
+the function returs bunnyEars(4)
+then bunnyEars(3)
+then bunnyEars(2)
+then bunnyEars(1)
+then bunyEars(0) and we trigger the base case :
+if bunnies == 0: return 0
 
 ## Exercise II
 
