@@ -97,7 +97,6 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        print(self._list)
         
         self.set_light_on()
 
