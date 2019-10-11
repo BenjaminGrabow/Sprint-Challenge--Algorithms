@@ -100,41 +100,34 @@ class SortingRobot:
         
         self.set_light_on()
 
-        while self.light_is_on():
-            
+        while self.light_is_on():      
             self.set_light_off()
             
             while self.can_move_right():
                 self.swap_item()
                 self.move_right()
-                
+            
                 if self.compare_item() == 1:
                     self.swap_item()
                     self.set_light_on()
-                
+            
                 self.move_left()
                 self.swap_item()
                 self.move_right()
             
-            while self.can_move_left():
-                self.swap_item()
-                self.move_left()
+            while self.can_move_left(): # if we would like to have the algorithm exactly working like bubble sort
+                self.swap_item() # we would only call move_left in the while loop and start then again with 
+                self.move_left() # the right side => it is more efficient if we also swap from the right to the left like here
+                self.set_light_on # but still not satisfying
                 
                 if self.compare_item() == -1:
                     self.swap_item()
                     self.set_light_on()
-                
+            
                 self.move_right()
                 self.swap_item()
                 self.move_left()
           
-        # return 
-# Compare the held item with the item in front of the robot:
-#         If the held item's value is greater, return 1.
-#         If the held item's value is less, return -1.
-#         If the held item's value is equal, return 0.
-#         If either item is None, return None.
-
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
